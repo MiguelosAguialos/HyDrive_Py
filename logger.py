@@ -17,5 +17,9 @@ def config_log():
         level=logging.INFO,encoding='UTF-16',
         format="%(asctime)s | %(levelname)s: %(message)s"
     )
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(logging.Formatter("%(asctime)s | %(levelname)s: %(message)s"))
+    logger.addHandler(console_handler)
 
 config_log()
