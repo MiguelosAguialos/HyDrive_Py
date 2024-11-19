@@ -1,12 +1,8 @@
 import logging
-import os
+from common_codes import create_folder
 import datetime
 
 logger = logging.getLogger('main')
-
-def create_folder(path):
-    if not os.path.exists(path):
-        os.makedirs(path)
 
 def config_log():
     date = datetime.datetime.now()

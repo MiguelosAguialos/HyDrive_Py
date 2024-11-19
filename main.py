@@ -5,5 +5,6 @@
 #   3. Qual é a configuração atual de monitoramento?
 
 from logger import logger
+import xlsxwriter
 
-logger.info('Programa inicializado com sucesso!')
+logger.info('HyDrive - Monitoring System | Starting..')
