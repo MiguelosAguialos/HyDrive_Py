@@ -3,6 +3,8 @@
 #   1. Status atual de funcionamento
 #   2. Última data de atualização
 #   3. Qual é a configuração atual de monitoramento?
+
+
 from report import generate_report
 from turbine import *
 
