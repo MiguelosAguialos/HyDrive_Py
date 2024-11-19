@@ -3,7 +3,7 @@
 #   1. Status atual de funcionamento
 #   2. Última data de atualização
 #   3. Qual é a configuração atual de monitoramento?
-
+from report import generate_report
 from turbine import *
 
 # Lista de objetos contendo a classe Turbina
@@ -15,3 +15,5 @@ operation_status = True
 logger.info('HyDrive - Monitoring System | Starting..')
 logger.info(f'Operation Status - Machine: {operation_status}')
 show_status_turbines(turbines)
+generate_report('Olá')
+
