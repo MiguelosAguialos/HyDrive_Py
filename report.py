@@ -38,7 +38,9 @@ def create_title(wb, ws):
 # Função para gerar o relatório com as linhas sendo o parâmetro
 def generate_report(data):
     create_folder('./reports')
-    wb = xlsxwriter.Workbook('./reports/demo.xlsx')
+    date = datetime.datetime.now()
+    format_date = date.strftime('%d') + '-' + date.strftime('%m') + '-' + date.strftime('%Y')
+    wb = xlsxwriter.Workbook(f'./reports/{format_date}.xlsx')
     ws = wb.add_worksheet('Home')
     create_title(wb, ws)
     table_range = xl_range(4, 1, len(data)+5, 5)
