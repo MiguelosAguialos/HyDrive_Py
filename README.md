@@ -27,6 +27,28 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ---
 
+### 👉 Informações úteis
+
+Ao executar o projeto, é necessário definir 2 informações previamente:
+1. O tipo de agendamento para a execução do monitoramento e a geração do relatório
+2. O intervalo de tempo para a execução do agendamento
+
+#### Configurações possíveis
+| Input  | Tipo de agendamento |
+| ------------- | ------------- |
+| sec  | segundos  |
+| min  | minutos  |
+| {qualquer texto}  | horas  |
+
+#### Exemplos:
+Os exemplos a seguir estão separados entre a primeira e segunda pergunta feitas ao executar o programa
+| Primeiro input  | Segundo input | Explicação |
+| ------------- | ------------- | ------------- |
+| sec  | 10  | Monitoramento a cada 10 segundos |
+| min  | 2  | Monitoramento a cada 2 minutos |
+| hora  | 1 | Monitoramento a cada 1 hora |
+---
+
 ### ⇣ Instalação e execução do projeto
 
 1. Baixe o arquivo py presente na pasta principal do projeto
