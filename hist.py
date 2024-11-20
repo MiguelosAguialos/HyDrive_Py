@@ -1,0 +1,1 @@
+# Gera arquivo txt com informações de histórico para cada dia.

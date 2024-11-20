@@ -3,6 +3,7 @@
 #   1. Status atual de funcionamento
 #   2. Última data de atualização
 #   3. Qual é a configuração atual de monitoramento?
+from common_codes import generate_random_values, get_power
 from main_exception import MainException
 from report import generate_report
 from turbine import *
@@ -12,16 +13,17 @@ import time
 # Lista de objetos contendo a classe Turbina
 turbines = [Turbine(1, True), Turbine(2, True), Turbine(3, False)]
 
-# Escolha de monitoramento para monitoramento por segundo, minuto ou hora.
-tempo_monitoramento = 'sec'
-
 # Define o status de operação da máquina
 operation_status = True
+
+# Define o intervalo de valores aleatórios que serão gerados com base em um mínimo e máximo apresentados (velocidade da água)
+speed_interval = (0.5, 2.0)
 
 def script():
     logger.info('HyDrive - Monitoring System | Starting..')
     logger.info(f'Operation Status - Machine: {operation_status}')
     show_status_turbines(turbines)
+    generate_speed_power_turbines(turbines, speed_interval)
     generate_report('Olá')
 
 def execute(opt, interval):
@@ -56,7 +58,7 @@ def execute(opt, interval):
 
 try:
     script()
-    execute('min', '-1')
+    execute('sec', 2)
 except MainException as e:
     logger.error(e.msg)
 
