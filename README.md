@@ -41,7 +41,7 @@ Ao executar o projeto, é necessário definir 2 informações previamente:
 | {qualquer texto}  | horas  |
 
 #### Exemplos:
-Os exemplos a seguir estão separados entre a primeira e segunda pergunta feitas ao executar o programa
+Os exemplos a seguir estão separados entre a primeira e segunda pergunta feitas ao executar o programa 
 | Primeiro input  | Segundo input | Explicação |
 | ------------- | ------------- | ------------- |
 | sec  | 10  | Monitoramento a cada 10 segundos |
@@ -51,8 +51,10 @@ Os exemplos a seguir estão separados entre a primeira e segunda pergunta feitas
 
 ### ⇣ Instalação e execução do projeto
 
-1. Baixe o arquivo executável HyDrive - Monitoring System.exe
-2. Execute o arquivo baixado
+1. Baixe a pasta do projeto
+2. Execute o arquivo executável `HyDrive - Monitoring System.exe`
+
+<strong>OBS: Não</strong> mova o arquivo `HyDrive - Monitoring System.exe` para fora da pasta principal. Ao invés disso, crie um atalho do executável em qualquer lugar que desejar!
 
 ---
 
