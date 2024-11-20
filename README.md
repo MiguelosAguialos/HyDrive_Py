@@ -15,7 +15,6 @@
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Python](https://www.python.org/) | Tec
-- [Random](https://docs.python.org/pt-br/3/library/random.html) | Lib
 - [XlsxWritter](https://pypi.org/project/XlsxWriter/) | Lib
 - [Schedule](https://schedule.readthedocs.io/en/stable/) | Lib
 
