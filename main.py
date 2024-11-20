@@ -1,9 +1,6 @@
-# Para realizar a simulação dos dados, iremos utilizar a biblioteca random para gerar números aleatórios.
-# Itens para serem ilustrados para o usuário:
-#   1. Status atual de funcionamento
-#   2. Última data de atualização
-#   3. Qual é a configuração atual de monitoramento?
-from common_codes import generate_random_values, get_power
+# O programa atual possui funcionalidades primordias de ilustrar os dados capturados pelas turbinas (simulados), histórico, geração de relatório por dia e agendamento.
+
+from hist import create_hist_file, read_hist
 from main_exception import MainException
 from report import generate_report
 from turbine import *
@@ -19,17 +16,23 @@ operation_status = True
 # Define o intervalo de valores aleatórios que serão gerados com base em um mínimo e máximo apresentados (velocidade da água)
 speed_interval = (0.5, 2.0)
 
+# Script principal
 def script():
     logger.info('HyDrive - Monitoring System | Starting..')
     logger.info(f'Operation Status - Machine: {operation_status}')
     show_status_turbines(turbines)
     generate_speed_power_turbines(turbines, speed_interval)
-    generate_report('Olá')
 
+    date = create_hist_file(get_str_turbines(turbines))
+    data = read_hist(date)
+    generate_report(data)
+
+# Função para executar o agendamento com tratamento de exceções personalizadas
 def execute(opt, interval):
     # Biblioteca de agendamento simples para definir o período de monitoramento que o usuário desejar.
-    # POssíveis configurações: sec (segundos), min (minutos), hour (horas). Além disso, é possível definir o intervalo de tempo do agendamento com base no tipo escolhido
+    # Possíveis configurações: sec (segundos), min (minutos), hour (horas). Além disso, é possível definir o intervalo de tempo do agendamento com base no tipo escolhido
 
+    script()
     try:
         if interval == 1:
             if opt == 'sec':
@@ -57,8 +60,8 @@ def execute(opt, interval):
         time.sleep(1)
 
 try:
-    script()
-    execute('sec', 2)
+    execute(input("Escolha o tipo de agendamento (padrão em horas): \n'sec': segundos\n'min': minutos\n-> "),
+            float(input('Digite o intervalo de tempo desejado\n-> ')))
 except MainException as e:
     logger.error(e.msg)
 

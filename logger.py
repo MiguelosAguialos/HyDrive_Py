@@ -1,3 +1,5 @@
+# Arquivo de configuração do logger
+
 import logging
 from common_codes import create_folder
 import datetime

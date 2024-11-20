@@ -1,3 +1,5 @@
+# Arquivo com as principais funções comuns
+
 import os
 import random
 import math
