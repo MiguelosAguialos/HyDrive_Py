@@ -37,8 +37,8 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 ### ✅ Features
 
 - [x] Display de informações úteis
-- [x] Geração de relatórios personalizados
-- [x] Configurações de relatórios e periodização de monitoramento
+- [x] Geração de relatórios
+- [x] Agendamento e configurações de monitoramento
 - [x] Ferramenta de Log
 - [x] Histórico de dados
 
