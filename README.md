@@ -51,8 +51,8 @@ Os exemplos a seguir estão separados entre a primeira e segunda pergunta feitas
 
 ### ⇣ Instalação e execução do projeto
 
-1. Baixe o arquivo py presente na pasta principal do projeto
-2. Utilizando uma ferramenta de execução de projeto, como o CMD, utilize o comando
+1. Baixe o arquivo executável HyDrive - Monitoring System.exe
+2. Execute o arquivo baixado
 
 ---
 
